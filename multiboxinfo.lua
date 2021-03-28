@@ -84,7 +84,6 @@ function multiboxInfo:UpdateLocalCurrencies()
 
     self["Currencies"]["Inventory"] = windower.ffxi.get_items().inventory.count .. "/" .. windower.ffxi.get_items().inventory.max
     self["Currencies"]["Gil"] = insertCommas(tostring(windower.ffxi.get_items().gil))
-    self["Timers"]["General"] = os.clock()
     
     if(os.clock() - self["Timers"]["Inject"] > self["Timers"]["CurrencyDelay"])then
 
